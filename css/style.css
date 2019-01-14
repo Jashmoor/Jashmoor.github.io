@@ -80,20 +80,24 @@ a {
 .pimg1 {
   background-image: url(https://source.unsplash.com/pazM9TQJ2Ck);
   min-height: 100%;
+  -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
 }
 
 .pimg1:hover {
+  -webkit-filter: blur(4px);
   filter: blur(4px);
 }
 
 .pimg2 {
   background-image: url(https://source.unsplash.com/Oaqk7qqNh_c);
   min-height: 400px;
+  -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
 }
 
 .pimg2:hover {
+  -webkit-filter: blur(4px) grayscale(100%);
   filter: blur(4px) grayscale(100%);
 }
 
@@ -136,6 +140,7 @@ a {
 
 /* grid */
 .coursegrid {
+  -webkit-transition: all 2s ease-in-out;
   transition: all 2s ease-in-out;
   display: grid;
   grid-template-columns: auto auto auto;
@@ -146,6 +151,7 @@ a {
 }
 
 .cardgrid {
+  -webkit-box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -162,11 +168,14 @@ a {
 }
 
 .cardimage {
+  -webkit-filter: grayscale(90%);
   filter: grayscale(90%);
 }
 
 .cardimage:hover {
+  -webkit-transition: all 0.8s ease;
   transition: all 0.8s ease;
+  -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
 }
 
@@ -286,6 +295,7 @@ a {
   }
 
   .cardimage {
+    -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
   }
 
