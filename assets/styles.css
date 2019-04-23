@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
+
+/* Globals */
+html, * {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Playfair Display", monospace;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  font-size: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.font-alt {
+  font-family: "Major Mono Display";
+  letter-spacing: 0.2rem;
+}
+
+/* Nav - Aside Classes */
+.aside {
+  z-index: 3;
+  width: 20vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.aside__title {
+  font-size: 1.4rem;
+  height: 22%;
+  width: 100%;
+  text-align: center;
+}
+
+.aside__tabs {
+  width: 80%;
+  text-align: center;
+}
+
+.aside__item-group {
+  position: relative;
+  top: 0;
+  left: 2vw;
+}
+
+.aside__item {
+  background-color: rgba(0, 0, 0, 0.6);
+  margin-top: 6vh;
+  margin-bottom: 6vh;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: white;
+  list-style: none;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.8s ease;
+}
+
+.aside__item:hover {
+  transition: all 0.8s ease;
+  padding-left: 30px;
+  border-radius: 30px;
+  background-color: #323232;
+  color: orange;
+}
+
+/* Main Sections */
+.landing__links {
+  position: fixed;
+  width: 10vw;
+  text-align: right;
+  font-size: 0.8rem;
+  top: 2vh;
+  right: 1vw;
+  display: grid;
+  height: 35vh;
+  grid-auto-rows: 1fr;
+}
+
+.landing__link {
+  margin: auto;
+  width: 65%;
+  padding: 5px 5px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 8px;
+  text-align: right;
+  transition: all 1s ease;
+}
+
+.landing__link:hover {
+  transition: all 0.8s ease;
+  background-color: orange;
+  color: black;
+  cursor: pointer;
+}
+
+.landing {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.landing__splash {
+  height: 100%;
+  width: 100%;
+  background-image: url('https://images.pexels.com/photos/311458/pexels-photo-311458.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
+  box-shadow: 5px 10px 12px #292929;
+}
+
+.landing__title {
+  position: relative;
+  top: 18vh;
+  left: 0;
+  font-size: 1.9rem;
+  letter-spacing: 0.9rem;
+  padding-left: 5vw;
+  border-left: 5px solid orange;
+}
+
+.landing__overlay {
+  position: relative;
+  top: 15vh;
+  left: 4vw;
+  color: rgba(130, 130, 130, 0.6);
+  font-size: 6.4rem;
+}
+
+.landing__container {
+  width: 65vw;
+  margin-left: 25vw;
+}
+
+.section-title {
+  z-index: 2;
+  font-size: 2.5rem;
+  position: relative;
+  top: 5vh;
+  left: 5vw;
+}
+
+#typing {
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  line-height: 70%;
+}
+
+/* Projects ************************************************************************ */
+.dark-section {
+  background-color: #323232;
+  color: #f4f4f4;
+}
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(40px, auto);
+  text-align: center;
+  grid-gap: 10px;
+  grid-template-areas:
+    "one one"
+    "two three"
+    "four four"
+    "five five";
+}
+
+.grid-one {
+  grid-area: one;
+  background-color: #e53935;
+  background-image: url("https://codepen.io/Jashmoor/pen/daMyxW");
+}
+
+.grid-two {
+  grid-area: two;
+  background-color: #039BE5;
+}
+
+.grid-three {
+  grid-area: three;
+  background-color: #757575;
+}
+
+.grid-four {
+  grid-area: four;
+  background-color: #FFB300;
+}
+
+.grid-five {
+  grid-area: five;
+  background-color: #43A047;
+}
+
+.projects__item {
+  border-radius: 8px;
+  border: 1px solid black;
+  height: 30vh;
+  padding: 4vh;
+  display: grid;
+  grid-auto-columns: 50% 50%;
+  grid-template:
+    "image title"
+    "image desc"
+    "image desc"
+    "image link";
+}
+
+.projects__item-title {
+  grid-area: title;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.projects__item-desc {
+  grid-area: desc;
+  font-size: 0.8rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.projects__item-img {
+  grid-area: image;
+  width: 90%;
+  height: auto;
+  border: 1px solid black;
+  box-shadow: 8px 8px 8px #000000;
+}
+
+.img-one {
+  background-image: url('images/LandingPage.JPG');
+  background-position: center;
+  background-size: cover;
+}
+
+.img-two {
+  background-image: url('images/TaskList.JPG');
+  background-position: center;
+  background-size: cover;
+}
+
+.img-three {
+  background-image: url('images/ColorGame.JPG');
+  background-position: center;
+  background-size: cover;
+}
+
+.projects__item-link {
+  grid-area: link;
+  border-radius: 16px;
+  color: #f3f3f3;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-color: black;
+}
+
+.course__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 10vh;
+}
+
+.course__card {
+  background-color: #f6f6f6;
+  text-align: center;
+  padding: 2vh;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.course__card button {
+  padding: 10px 20%;
+}
+
+.course__card-title {
+  font-weight: bold;
+  position: relative;
+  z-index: 3;
+  height: 80px;
+}
+
+.course__card-image img {
+  border: 1px solid black;
+}
+
+.course__card-desc {
+  font-size: 0.9rem;
+}
+
+.course__card-progress {
+  margin-bottom: 20px;
+}
+
+.project__navbar {
+  position: fixed;
+  font-size: 1.3rem;
+  border-bottom: 2px solid orange;
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 10vh;
+  background-color: #323232;
+  color: orange;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+  }
+
+  .project__navbar {
+    font-size: 0.9rem;
+  }
+
+  .landing__container {
+    position: relative;
+    width: 75%;
+    left: -6vw;
+  }
+
+  .landing__splash {
+    overflow: hidden;
+  }
+
+  .aside__title {
+    display: none;
+  }
+
+  .aside__item-group {
+    text-align: center;
+    padding: 5px;
+    left: 0;
+  }
+
+  .aside__item {
+    padding: 15px 0;
+    font-size: 0.8rem;
+    background-color: orange;
+    color: black;
+  }
+
+  .aside nav .aside__tabs {
+    position: fixed;
+    height: 10vh;
+    top: 0px;
+    left: 0px;
+    display: inline;
+  }
+
+  .landing__links {
+    position: fixed;
+    top: 60%;
+    left: 0px;
+    text-align: center;
+    z-index: 99;
+  }
+
+  .landing__link {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: orange;
+    color: black;
+  }
+
+  .landing__link-list {
+    display: none;
+  }
+
+  .landing__title {
+    position: relative;
+    top: 10vh;
+    left: 5vw;
+    font-size: 1rem;
+  }
+
+  .landing__overlay {
+    position: relative;
+    text-align: left;
+    height: 90vw;
+    color: black;
+    font-size: 2rem;
+    transform: rotate(270deg);
+  }
+
+  .projects__grid {
+    display: block;
+    text-align: center;
+    height: auto;
+  }
+
+  .projects__item {
+    padding: 15px 0;
+    ;
+    margin-bottom: 30px;
+  }
+
+  .projects__item-link {
+    padding: 10px;
+    margin: 2px 0;
+  }
+
+  .projects__item-img {
+    position: relative;
+    top: 5px;
+    left: -5px;
+    border-radius: 5%;
+  }
+
+  .course__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .course__grid {
+    grid-template-columns: auto;
+  }
+}
