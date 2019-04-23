@@ -78,6 +78,11 @@ a {
 }
 
 /* Main Sections */
+.centered {
+  text-align: justify;
+  font-size: 1.2rem;
+}
+
 .landing__links {
   position: fixed;
   width: 10vw;
